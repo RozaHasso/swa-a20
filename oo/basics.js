@@ -48,7 +48,7 @@ console.log(f("2", "2"))
 
 let g = f
 console.log(g(2, 2))
-
+//use "let" when you want to change its varaible  and assign a new varaible later 
 let g1 = function(x, y) {
   return x + y
 }
@@ -58,11 +58,16 @@ console.log(g2(2, 2))
 
 // Basic objects
 h = {x: 2, y: 3}
+//"sum" is the global function
 let sum = function() { return this.x + this.y }
 h.sum = sum
 
+//"sum" is not bounded here
 console.log(sum())
+// "this" is referring to h in this case (because the "sum" function is bounded to "h")
 console.log(h.sum())
+
+
 
 const name = {
   firstName: "Ole",
